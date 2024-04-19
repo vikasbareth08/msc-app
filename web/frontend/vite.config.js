@@ -3,7 +3,11 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import https from "https";
 import react from "@vitejs/plugin-react";
+import dotenv from "dotenv";
+dotenv.config();
 
+console.log("env BACKEND  PORT= ", process.env.BACKEND_PORT);
+console.log("DEFAULT PORT", process.env.PORT);
 if (
   process.env.npm_lifecycle_event === "build" &&
   !process.env.CI &&
@@ -15,7 +19,8 @@ if (
 }
 
 const proxyOptions = {
-  target: `http://127.0.0.1:${process.env.BACKEND_PORT}`,
+  // target: `http://127.0.0.1:${process.env.BACKEND_PORT}`,
+  target: `http://127.0.0.1:6060`,
   changeOrigin: false,
   secure: true,
   ws: false,
@@ -54,6 +59,7 @@ export default defineConfig({
   server: {
     host: "localhost",
     port: process.env.FRONTEND_PORT,
+    // port: 3000,
     hmr: hmrConfig,
     proxy: {
       "^/(\\?.*)?$": proxyOptions,

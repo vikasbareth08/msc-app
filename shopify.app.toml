@@ -3,7 +3,7 @@
 client_id = "33a5c7d59030db5a138dc1268dec6363"
 name = "MSC-APP"
 handle = "msc-app-2"
-application_url = "https://commented-dumb-listed-lawsuit.trycloudflare.com"
+application_url = "https://ab-decades-conversation-sector.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://commented-dumb-listed-lawsuit.trycloudflare.com/auth/callback",
-  "https://commented-dumb-listed-lawsuit.trycloudflare.com/auth/shopify/callback",
-  "https://commented-dumb-listed-lawsuit.trycloudflare.com/api/auth/callback"
+  "https://ab-decades-conversation-sector.trycloudflare.com/auth/callback",
+  "https://ab-decades-conversation-sector.trycloudflare.com/auth/shopify/callback",
+  "https://ab-decades-conversation-sector.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

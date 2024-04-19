@@ -6,15 +6,17 @@ import serveStatic from "serve-static";
 import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
 import PrivacyWebhookHandlers from "./privacy.js";
+// import dotenv from "dotenv";
+// dotenv.config();
 
 console.log("env BACKEND  PORT= ", process.env.BACKEND_PORT);
 console.log("DEFAULT PORT", process.env.PORT);
-const PORT = parseInt(
-  process.env.BACKEND_PORT || process.env.PORT || "3000",
-  10
-);
+// const PORT = parseInt(
+//   process.env.BACKEND_PORT || process.env.PORT || "3000",
+//   10
+// );
 
-// const PORT = 6060;
+const PORT = 6060;
 
 const STATIC_PATH =
   process.env.NODE_ENV === "production"
